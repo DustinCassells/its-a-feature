@@ -1,0 +1,19 @@
+nodes:
+  - address: 10.18.20.56
+#    internal_address: 172.16.22.12
+    user: localadmin
+    role: [controlplane,etcd]
+  - address: 10.18.20.57
+#    internal_address: 172.16.32.37
+    user: localadmin
+    role: [controlplane,etcd]
+  - address: 10.18.20.58
+#    internal_address: 172.16.42.73
+    user: localadmin
+    role: [controlplane,etcd]
+
+#services:
+#  etcd:
+#    snapshot: true
+#    creation: 6h
+#    retention: 24h
