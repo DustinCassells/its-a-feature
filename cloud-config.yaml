@@ -8,7 +8,7 @@ rancher:
   eth0:
   address: 10.11.20.218/29
   gateway: 10.11.20.250
-  mtu: 1500
+#  mtu: 1500
   dhcp: false
 dns:
   override: true
