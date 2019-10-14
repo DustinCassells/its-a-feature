@@ -1,0 +1,21 @@
+#cloud-config
+ssh_authorized_keys:
+ - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC4cT1imiupPvT6Z64GQInFH18m6wRxBR8xg+3hFlS5nxVMJkAyUpkcoSNOSGuRLT5zcOBkGDmg5Y5ZBp1YwK7S0OHKhkZv0f6xI/V63DI+MB6FrLA7qgBBR3uS++z/Gxc2A1lp/u8TI50DbOMSJhn
+G3k9XXsp1fGUyWVy0nKMlbZtpFmEzZJWPJcUzfatWZoZcnXQSxAVPDdiuXAwmXS4CI40gzdmOj5z5X0WG4H+CZmYpwjLQS6eqNoguP1ttl4kEphbWFkIUSU21192l3tOQEhv9+6lja+B4TmjGC++41qG9W1dlBth7X6EBk+4uS6VL5nYDDipMHP6wuz
+V/c6kl
+rancher:
+ interfaces:
+  eth0:
+  address: 10.11.20.218/29
+  gateway: 10.11.20.250
+  mtu: 1500
+  dhcp: false
+dns:
+  override: true
+  nameservers:
+  - 10.11.20.11
+  - 10.10.20.11
+  search:
+  - statnet.statpro.com
+write_files:
+ - 
