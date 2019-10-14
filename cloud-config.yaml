@@ -17,5 +17,4 @@ dns:
   - 10.10.20.11
   search:
   - statnet.statpro.com
-write_files:
- - 
+#write_files:
