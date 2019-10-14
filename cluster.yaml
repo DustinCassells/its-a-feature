@@ -84,7 +84,7 @@ enable_cluster_monitoring: true
 enable_network_policy: false
 local_cluster_auth_endpoint: 
   enabled: true
-name: "k8s-sbx"
+name: ""
 
 cloud_provider:
  name: vsphere
@@ -97,7 +97,7 @@ cloud_provider:
    user: 
    password: 
    port: 443
-   datacenter: Montreal
+   datacenter:
    workspace:
      server: 
      
