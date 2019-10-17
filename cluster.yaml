@@ -3,6 +3,24 @@ authentication:
   strategy: "x509|webhook"
 bastion_host: 
   ssh_agent_auth: false
+cloud_provider: 
+  name: "vsphere"
+  vsphereCloudProvider: 
+    global: 
+      insecure-flag: true
+      soap-roundtrip-count: 0
+      working-dir: "Montreal/Kubernetes Cluster"
+    virtual_center: 
+      x.x.x.x: 
+        port: "443"
+        soap-roundtrip-count: 0
+        user: "svc-xxx"
+        password: ""
+    workspace: 
+      datacenter: "Montreal"
+      default-datastore: "mtl-dc-na:mtl_internal_test_03"
+      folder: "Kubernetes cluster"
+      server: "x.x.x.x"
 ignore_docker_version: true
 # 
 #   # Currently only nginx ingress provider is supported.
@@ -73,6 +91,8 @@ services:
     pod_security_policy: false
     service_node_port_range: "30000-32767"
   kubelet: 
+    extra_args: 
+      cloud-provider: "vsphere"
     fail_swap_on: false
 ssh_agent_auth: false
 # 
@@ -84,23 +104,4 @@ enable_cluster_monitoring: true
 enable_network_policy: false
 local_cluster_auth_endpoint: 
   enabled: true
-name: ""
-
-cloud_provider:
- name: vsphere
- vsphereCloudProvider:
-  global:
-   working-dir: 
-   insecure-flag: true
-   virtual_center: 
-   
-   user: 
-   password: 
-   port: 443
-   datacenter:
-   workspace:
-     server: 
-     
-     datacenter: 
-     folder: 
-     default-datastore: 
+name: "k8s-prd"
